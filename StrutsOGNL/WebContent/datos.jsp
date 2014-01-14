@@ -6,9 +6,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	table {
+		cell-padding: 0px;
+	}
+	tr:nth-child(odd) {
+		background-color: #DDDDDD;		
+	}
+	td {
+		padding: 2px 10px;
+	}
+</style>
 </head>
 <body>
-	<table>
+	<table style="width: 100%;">
 		<tr>
 			<td> 
 				<pre>&lt;s:property value="#session.datoSesion"/&gt;</pre>
@@ -75,7 +86,7 @@
 		</tr>
 		<tr>
 			<td>
-				<pre>&lt;s:property value="mensaje" /&gt;</pre>
+				<pre>&lt;s:property value="mensaje"/&gt;</pre>
 			</td>
 			<td>
 				<s:property value="mensaje" />
@@ -83,7 +94,7 @@
 		</tr>
 		<tr>
 			<td>
-				<pre>&lt;s:property value="#attr.mensaje" /&gt;</pre>
+				<pre>&lt;s:property value="#attr.mensaje"/&gt;</pre>
 			</td>
 			<td>
 				<s:property value="#attr.mensaje']" />
@@ -91,12 +102,52 @@
 		</tr>
 		<tr>
 			<td>
-				<pre>&lt;s:property value="#attr['mensaje']" /&gt;</pre>
+				<pre>&lt;s:property value="#attr['mensaje']"/&gt;</pre>
 			</td>
 			<td>
 				<s:property value="#attr['mensaje']" />
 			</td>
 		</tr>
-	</table>	
+		<tr>
+			<td>
+				<pre>&lt;s:property value="new com.javatutoriales.struts2.ognl.Constantes()"/&gt;</pre>
+			</td>
+			<td>
+				<s:property value="new com.javatutoriales.struts2.ognl.Constantes()" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<pre>&lt;s:property value="new com.javatutoriales.struts2.ognl.Constantes().atributo"/&gt;</pre>
+			</td>
+			<td>
+				<s:property value="new com.javatutoriales.struts2.ognl.Constantes().atributo" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<pre>&lt;s:property value="new com.javatutoriales.struts2.ognl.Constantes().metodoDeInstancia()"/&gt;</pre>
+			</td>
+			<td>
+				<s:property value="new com.javatutoriales.struts2.ognl.Constantes().metodoDeInstancia()" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<pre>&lt;s:property value="@com.javatutoriales.struts2.ognl.Constantes@metodoEstatico()"/&gt;</pre>
+			</td>
+			<td>
+				<s:property value="@com.javatutoriales.struts2.ognl.Constantes@metodoEstatico()" />
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				<pre>&lt;s:property value="@com.javatutoriales.struts2.ognl.Constantes@valor"/&gt;</pre>
+			</td>
+			<td>
+				<s:property value="@com.javatutoriales.struts2.ognl.Constantes@valor" />
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
